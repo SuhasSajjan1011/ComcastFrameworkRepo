@@ -13,6 +13,9 @@ public class HomePage {
 		this.d= d;
 		PageFactory.initElements(d,this);
 	}
+	@FindBy(linkText="Products")
+	private WebElement productLink;
+	
 	@FindBy(xpath="//a[text()='Organizations']")
 	private WebElement orgLink;
 	
@@ -30,6 +33,10 @@ public class HomePage {
 	
 	@FindBy(xpath="//a[text()='Sign Out']")
 	private WebElement signOutLnk;
+	
+	public WebElement getProductLink() {
+		return productLink;
+	}
 	
 	public WebElement getAdminImg() {
 		return adminImg;
